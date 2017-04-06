@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class mode_Activity extends AppCompatActivity {
 
@@ -30,7 +31,31 @@ public class mode_Activity extends AppCompatActivity {
         madapter = new Recyeviwe_adapter();
         recyclerviwe.setAdapter(madapter);
     }
+    public void getaction(int a){
+        switch ( a){
+            case 0
+                    :Intent i = new Intent(getApplicationContext(), _action_1.class);
+                        startActivity(i);
+                break;
+            case 1
+                    :
+                break;
+            case 2
+                    :
+                break;
+            case 3
+                    :
+                break;
+            case 4
+                    :
+                break;
+            case 5
+                    :
+                break;
 
+        }
+
+    }
     public  class Recyeviwe_adapter extends  RecyclerView.Adapter<ViweHolder>{
 
 
@@ -43,6 +68,7 @@ public class mode_Activity extends AppCompatActivity {
         @Override
         public void onBindViewHolder(ViweHolder holder, int position) {
             holder.tv_action_name.setText("ชื่อท่า" + position);
+            holder.itemView.setTag(position);
 
 
         }
@@ -62,6 +88,16 @@ public class mode_Activity extends AppCompatActivity {
                     tv_action_name = (TextView) itemView.findViewById(R.id.tv_action_name);
                     tv_action_detail = (TextView) itemView.findViewById(R.id.tv_action_detail);
                     imageth = (ImageView) itemView.findViewById(R.id.imageth);
+
+                    //ดัก onclick
+                    itemView.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            int clickindex = (int) v.getTag();
+                            //Toast.makeText(mode_Activity.this, "clickon row :"+ clickindex, Toast.LENGTH_SHORT).show();
+                            getaction(clickindex);
+                        }
+                    });
 
                 }
             }
