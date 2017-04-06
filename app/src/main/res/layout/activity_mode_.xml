@@ -1,77 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/oren"
-    tools:context="com.example.hubble.paralysis_app.mode_Activity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <Button
-        android:id="@+id/action_1"
-        android:layout_width="wrap_content"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rec"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="ท่าที่1"
-        android:onClick="Action_1"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="110dp"
-        android:layout_marginLeft="44dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ท่าที่2"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="110dp"
-        app:layout_constraintLeft_toRightOf="@+id/action_1"
-        android:layout_marginLeft="82dp" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ท่าที่3"
-        android:layout_marginTop="37dp"
-        app:layout_constraintTop_toBottomOf="@+id/action_1"
-        android:layout_marginLeft="44dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ท่าที่4"
-        android:layout_marginTop="37dp"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
-        app:layout_constraintLeft_toRightOf="@+id/button3"
-        android:layout_marginLeft="82dp" />
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ท่าที่5"
-        android:layout_marginTop="9dp"
-        app:layout_constraintTop_toBottomOf="@+id/button3"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintVertical_bias="0.069"
-        android:layout_marginLeft="44dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
-
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ท่าที่6"
-        android:layout_marginTop="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/button4"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintVertical_bias="0.065"
-        app:layout_constraintLeft_toRightOf="@+id/button5"
-        android:layout_marginLeft="82dp" />
+        tools:listitem="@layout/item"></android.support.v7.widget.RecyclerView>
 
 </android.support.constraint.ConstraintLayout>
